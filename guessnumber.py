@@ -1,15 +1,18 @@
 import random
 
-for x in range(1):
-  num = random.randint(1,10)
+
+num = random.randint(1,5)
+
+
+print(" ")
+print("     ***Welcome to the Great Number Guessing Game***")
+print(" ")
+
 
 while True:
-    guess = input("guess number:"  )
+    guess = int(input("guess number:"  ))
     if guess == num:
         print("Congradulations. You guess the number! ")
-        playAgain = raw_input('Do you want to contine y/n')
-        if playAgain == "n":
-            break
-else:
-    print("Sorry not it, try again")
-    pass
+    else:
+        print("Sorry not it, try again")
+        pass
