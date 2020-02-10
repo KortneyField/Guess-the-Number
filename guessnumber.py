@@ -1,18 +1,29 @@
 import random
 
 
-num = random.randint(1,5)
 
+guessNum = 0
+guessLimit = 3
 
 print(" ")
 print("     ***Welcome to the Great Number Guessing Game***")
 print(" ")
 
+low = int(input("Enter low number: "))
+high = int(input("Enter high number: ")) 
+
+num = random.randint(low,high)
 
 while True:
     guess = int(input("guess number:"  ))
+    print(" ")
     if guess == num:
-        print("Congradulations. You guess the number! ")
+        print("CONGRATS!! You guess the number! ")
+        print(" ")
+        break
     else:
-        print("Sorry not it, try again")
+        guessNum = guessNum + 1
+        print("SORRY not it, try again")
+        print("You have {} guesses left".format(guessNum))
+        print(" ")
         pass
