@@ -6,7 +6,10 @@ for x in range(1):
 while True:
     guess = input("guess number:"  )
     if guess == num:
-        print("congradulations")
-    else:
-        print("sorry not it")
-        pass
+        print("Congradulations. You guess the number! ")
+        playAgain = raw_input('Do you want to contine y/n')
+        if playAgain == "n":
+            break
+else:
+    print("Sorry not it, try again")
+    pass
